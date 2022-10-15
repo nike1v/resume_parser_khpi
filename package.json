@@ -1,0 +1,23 @@
+{
+  "name": "web-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nike1v/resume_parser_khpi.git"
+  },
+  "author": "Mykyta Vlasov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nike1v/resume_parser_khpi/issues"
+  },
+  "homepage": "https://github.com/nike1v/resume_parser_khpi#readme",
+  "volta": {
+    "node": "16.18.0",
+    "npm": "8.19.2"
+  }
+}
