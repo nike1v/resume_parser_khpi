@@ -8,3 +8,18 @@ datasource db {
   url                  = env("DATABASE_URL")
   referentialIntegrity = "prisma"
 }
+
+model JobDetails {
+  id                 String @id @unique
+  siteId             Int
+  name               String @db.Text
+  description        String @db.LongText
+  salary             String @db.Text
+  country            String @db.Text
+  yearsOfExperience  Int    @db.MediumInt
+  englishLevel       String @db.Text
+  professionKeywords Json
+  link               String @db.Text
+  companyName        String @db.Text
+  postDate           String @db.Text
+}

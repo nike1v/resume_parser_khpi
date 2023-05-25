@@ -2,7 +2,7 @@ import { Cluster } from "puppeteer-cluster";
 import puppeteer from "puppeteer";
 
 class Browser {
-	async clusterInstance (tabsNumber?: number, isHeadless = true) {
+	async clusterInstance (tabsNumber?: number, isHeadless = true, isMonitor = false) {
 		try {
 			console.time("clusterStart");
 			console.log("Cluster instance starting");
@@ -10,10 +10,10 @@ class Browser {
 				concurrency: Cluster.CONCURRENCY_CONTEXT,
 				maxConcurrency: tabsNumber || 1,
 				retryDelay: 10000,
-				retryLimit: 10,
+				retryLimit: 50,
 				skipDuplicateUrls: true,
 				sameDomainDelay: 500,
-				monitor: isHeadless,
+				monitor: isMonitor,
 				timeout: 2147483646,
 				puppeteerOptions: {
 					headless: isHeadless,
